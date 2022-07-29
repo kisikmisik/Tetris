@@ -3,6 +3,7 @@
     background-color: black;
     border: 2px solid white;
 }
+
 body {
     display: flex;
     justify-content: center;
@@ -18,17 +19,29 @@ body {
     letter-spacing: 5px;
     font-family: Arial, sans-serif;
 }
-.menu, .result {
+
+select {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.menu,
+.result {
     position: relative;
     top: -700px;
     height: 0;
     overflow: visible;
-    
+
 }
-.menu.hidden, .result.hidden {
+
+.menu.hidden,
+.result.hidden {
     top: 0;
     visibility: hidden;
 }
+
 .btn {
     border: 1px solid white;
     color: white;
@@ -39,6 +52,7 @@ body {
     padding: 15px;
     cursor: pointer;
 }
+
 .game-ui {
     visibility: visible;
     position: absolute;
@@ -50,10 +64,13 @@ body {
     height: 300px;
     border: 2px solid white;
 }
+
 .game-ui.hidden {
     visibility: hidden;
 }
-.game-score, .game-timer {
+
+.game-score,
+.game-timer {
     font-weight: bold;
     font-size: 20px;
 }
