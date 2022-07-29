@@ -1,0 +1,59 @@
+.field {
+    box-sizing: border-box;
+    background-color: black;
+    border: 2px solid white;
+}
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-family: Arial, sans-serif;
+}
+.menu, .result {
+    position: relative;
+    top: -700px;
+    height: 0;
+    overflow: visible;
+    
+}
+.menu.hidden, .result.hidden {
+    top: 0;
+    visibility: hidden;
+}
+.btn {
+    border: 1px solid white;
+    color: white;
+    background-color: black;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 5px;
+    padding: 15px;
+    cursor: pointer;
+}
+.game-ui {
+    visibility: visible;
+    position: absolute;
+    right: 265px;
+    top: 150px;
+    padding: 30px;
+    box-sizing: border-box;
+    width: 300px;
+    height: 300px;
+    border: 2px solid white;
+}
+.game-ui.hidden {
+    visibility: hidden;
+}
+.game-score {
+    font-weight: bold;
+    font-size: 20px;
+}
