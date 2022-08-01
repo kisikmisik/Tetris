@@ -136,14 +136,19 @@
         isCollided() {
             const staticShapesArr = gameState.shapesOnField.filter(el => el.isMoving === false);
 
-            const isAnyElementsCollided = false;
-            // staticShapesArr.some((staticShapeElements) => {
-            //     console.log('staticShapeElements', staticShapeElements)
-            //     return staticShapeElements.some((staticEl) => {
-            //         console.log(staticEl.x)
-            //     })
-            // });
-
+            let isAnyElementsCollided = false;
+            staticShapesArr.forEach((staticShapeElements) => {          
+                staticShapeElements.coods.forEach((staticEl) => {
+                    for (let dynamicEl of this.coods) {
+                        if (staticEl.x === dynamicEl.x && staticEl.y === (dynamicEl.y + 1)) {
+                            isAnyElementsCollided = true;
+                        }
+                        
+                    }
+                    
+                })
+            });
+            console.log('IsCollided', isAnyElementsCollided)
             return this.coods.some(el => el.y >= (cellsCountY - 1) || isAnyElementsCollided);
         }
         startMoving() {
